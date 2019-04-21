@@ -1,0 +1,23 @@
+#include<iostream>
+
+using namespace std;
+
+float perpangkatan(int angka,int pangkat){
+    if (pangkat==0){return 1;}
+    else{return angka*perpangkatan(angka,pangkat-1);}
+}
+
+
+main(){
+int angka,pangkat;
+double hasil;
+string plh;
+cout<<"masukan nilai angka  :";cin>>angka;
+cout<<"masukan nilai pangkat:";cin>>pangkat;
+cout<<"pangkat negatif/positif:";cin>>plh;
+if (plh=="positif")
+   {pangkat=pangkat;cout<<endl<<" HASILNYA ADALAH :"<<perpangkatan(angka,pangkat);}
+else if (plh=="negatif"){pangkat=(pangkat*-1);cout<<endl<<" HASILNYA ADALAH :"<<1/perpangkatan(angka,pangkat);}
+
+cout<<endl<<endl<<endl;
+}
